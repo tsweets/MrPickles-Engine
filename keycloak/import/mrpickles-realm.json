@@ -540,8 +540,8 @@
       "oidc.ciba.grant.enabled" : "false",
       "client.secret.creation.time" : "1713148612",
       "backchannel.logout.session.required" : "true",
-      "backchannel.logout.url" : "http://Tonys-MacBook-Air.local:7080/bff/logout/connect/back-channel/mrpickles",
-      "post.logout.redirect.uris" : "http://localhost:7080/*##http://127.0.0.1:7080/*##https://localhost:7080/*##https://127.0.0.1:7080/*##http://Tonys-MacBook-Air.local:7080/*##https://Tonys-MacBook-Air.local:7080/*",
+      "backchannel.logout.url" : "http://localhost:7080/bff/logout/connect/back-channel/mrpickles",
+      "post.logout.redirect.uris" : "http://localhost:7080/*##http://127.0.0.1:7080/*##https://localhost:7080/*##https://127.0.0.1:7080/*",
       "oauth2.device.authorization.grant.enabled" : "false",
       "display.on.consent.screen" : "false",
       "backchannel.logout.revoke.offline.tokens" : "false"

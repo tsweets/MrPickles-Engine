@@ -13,7 +13,9 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
+		<!--<version>3.3.5</version>-->
+		<!--<version>3.3.0</version>-->
+		<version>3.4.1</version>
 	</parent>
 
 	<modules>
@@ -83,7 +85,8 @@
 
 	<properties>
 		<java.version>17</java.version>
-		<spring-cloud.version>2023.0.1</spring-cloud.version>
+		<!--<spring-cloud.version>2023.0.1</spring-cloud.version>-->
+		<spring-cloud.version>2024.0.0</spring-cloud.version>
 		<spring-addons.version>7.8.2</spring-addons.version>
 
 		<!--
