@@ -30,7 +30,10 @@ direct link http://localhost:4202/vue-ui
 through app http://localhost:7080/vue-ui/
 
 4. Start BFF
-run app from intellij
+run app from intellij or from backend/bff
+```
+mvn spring-boot:run
+```
 
 5. Start Resource Server
 

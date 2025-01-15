@@ -36,3 +36,4 @@ node_modules
 dist
 *.iml
 atlassian-ide-plugin.xml
+.vscode
