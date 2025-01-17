@@ -36,9 +36,10 @@
         </developer>
     </developers>
     <properties>
-        <!-- Keep in sync with ../pom.xml -->
-        <!-- <tcnative.version>2.0.54.Final</tcnative.version> -->
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
+		<spring-addons.version>7.8.2</spring-addons.version>
     </properties>
+
     <!-- <build>
         <plugins>
             <plugin>

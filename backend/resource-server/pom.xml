@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.beer30.mrpickles</groupId>
-		<artifactId>backend</artifactId>
+		<artifactId>mrpickles-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
@@ -34,6 +34,7 @@
 		<dependency>
 			<groupId>com.c4-soft.springaddons</groupId>
 			<artifactId>spring-addons-starter-oidc</artifactId>
+			<version>${spring-addons.version}</version>
 		</dependency>
 
 		<dependency>
@@ -60,6 +61,7 @@
 		<dependency>
 			<groupId>com.c4-soft.springaddons</groupId>
 			<artifactId>spring-addons-starter-oidc-test</artifactId>
+			<version>${spring-addons.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
