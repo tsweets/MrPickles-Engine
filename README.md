@@ -44,3 +44,17 @@ admin\admin
 
 Normal App User:  
 user\user
+
+# Docker Notes
+## Docker Build
+
+```
+mvn compile jib:dockerBuild
+```
+or 
+```
+ mvn clean compile jib:dockerBuild 
+```
+
+## Docker Run
+docker run -p 8888:8888

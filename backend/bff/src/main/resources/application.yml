@@ -4,8 +4,11 @@ scheme: http
 hostname: localhost
 reverse-proxy-port: 7080
 reverse-proxy-uri: ${scheme}://${hostname}:${reverse-proxy-port}
+authorization-server-host: keycloak.sde.skyline-lab.com
+authorization-server-port: 8443
 authorization-server-prefix: /auth
-issuer: ${reverse-proxy-uri}${authorization-server-prefix}/realms/mrpickles
+#issuer: ${reverse-proxy-uri}${authorization-server-prefix}/realms/mrpickles
+issuer: ${scheme}://${authorization-server-host}:${authorization-server-port}${authorization-server-prefix}/realms/mrpickles
 client-id: mrpickles-confidential
 client-secret: secret
 username-claim-json-path: $.preferred_username
@@ -111,7 +114,8 @@ logging:
         boot: INFO
         security: TRACE
         web: INFO
-    
+
+
 ---
 spring:
   config:

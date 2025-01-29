@@ -14,9 +14,10 @@ vue-uri: http://${hostname}:${vue-port}${vue-prefix}
 react-port: 4203
 react-prefix: /react-ui
 react-uri: http://${hostname}:${react-port}${react-prefix}
-authorization-server-port: 8080
+authorization-server-host: keycloak.sde.skyline-lab.com
+authorization-server-port: 8443
 authorization-server-prefix: /auth
-authorization-server-uri: ${scheme}://${hostname}:${authorization-server-port}${authorization-server-prefix}
+authorization-server-uri: ${scheme}://${authorization-server-host}:${authorization-server-port}${authorization-server-prefix}
 bff-port: 7081
 bff-prefix: /bff
 bff-uri: ${scheme}://${hostname}:${bff-port}
