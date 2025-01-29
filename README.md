@@ -10,7 +10,7 @@ Described here https://github.com/spring-projects/spring-security/issues/16002
 
 Avoid Spring boot 3.3.5 and framework < 6.1.15 (most likely)
 # Starting Up App
-1. Start Keycloak  
+1. Start Keycloak  (if not using remote)
 ```
 cd keycloak
 docker compose up
@@ -44,6 +44,8 @@ admin\admin
 
 Normal App User:  
 user\user
+
+note: remote keycloak for dev is at http://keycloak.sde.skyline-lab.com:8443
 
 # Docker Notes
 ## Docker Build
