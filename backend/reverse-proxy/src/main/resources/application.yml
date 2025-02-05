@@ -1,7 +1,9 @@
 # Custom properties to ease configuration overrides
 # on command-line or IDE launch configurations
 scheme: http
+#10.220.1.222
 hostname: localhost
+#hostname: host.docker.internal
 reverse-proxy-port: 7080
 angular-port: 4201
 angular-prefix: /angular-ui
@@ -11,6 +13,7 @@ vue-port: 4202
 vue-prefix: /vue-ui
 # Update scheme if you enable SSL in vite.config.ts
 vue-uri: http://${hostname}:${vue-port}${vue-prefix}
+# doesnt work vue-uri: no://op
 react-port: 4203
 react-prefix: /react-ui
 react-uri: http://${hostname}:${react-port}${react-prefix}
@@ -83,7 +86,7 @@ logging:
       springframework:
         boot: INFO
         web: INFO
-    
+
 ---
 spring:
   config:
@@ -94,63 +97,3 @@ server:
     enabled: true
 scheme: https
 authorization-server-port: 8443
-
----
-spring:
-  config:
-    activate:
-      on-profile: cognito
-  cloud:
-    gateway:
-      routes:
-      # SPAs assets
-      - id: angular-ui
-        uri: ${angular-uri}
-        predicates:
-        - Path=${angular-prefix}/**
-      - id: vue-ui
-        uri: ${vue-uri}
-        predicates:
-        - Path=${vue-prefix}/**
-      - id: react-ui
-        uri: ${react-uri}
-        predicates:
-        - Path=${react-prefix}/**
-      # not routing to authorization server here
-      # Proxy BFF
-      - id: bff
-        uri: ${bff-uri}
-        predicates:
-        - Path=${bff-prefix}/**
-        filters:
-        - StripPrefix=1
-
----
-spring:
-  config:
-    activate:
-      on-profile: auth0
-  cloud:
-    gateway:
-      routes:
-      # SPAs assets
-      - id: angular-ui
-        uri: ${angular-uri}
-        predicates:
-        - Path=${angular-prefix}/**
-      - id: vue-ui
-        uri: ${vue-uri}
-        predicates:
-        - Path=${vue-prefix}/**
-      - id: react-ui
-        uri: ${react-uri}
-        predicates:
-        - Path=${react-prefix}/**
-      # not routing to authorization server here
-      # Proxy BFF
-      - id: bff
-        uri: ${bff-uri}
-        predicates:
-        - Path=${bff-prefix}/**
-        filters:
-        - StripPrefix=1

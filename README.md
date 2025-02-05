@@ -16,9 +16,14 @@ cd keycloak
 docker compose up
 ```
 2. Start Reverse Proxy
+run app from intellij or terminal
 ```
-run app from intellij
-TODO: mvn run
+ mvn spring-boot:run
+```
+Port 7080
+```
+docker run -p 7080:7080 reverse-proxy
+ 
 ```
 
 3. Start VUE UI Frontend
@@ -36,6 +41,11 @@ mvn spring-boot:run
 ```
 
 5. Start Resource Server
+Port 7084
+```
+docker run -p 7084:7084 resource-server
+ 
+```
 
 ## Keycloak
 Admin Page
