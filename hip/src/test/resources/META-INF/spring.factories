@@ -1,0 +1,5 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    org.beer30.mrpickles.config.\
+    SqlTestContainersSpringContextCustomizerFactory,org.beer30.mrpickles.config.\
+    TestContainersSpringContextCustomizerFactory,org.beer30.mrpickles.config.\
+    KafkaTestContainersSpringContextCustomizerFactory
